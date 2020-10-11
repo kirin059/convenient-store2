@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<title>편의점 비교분석</title>
+<meta charset="utf-8">
+<script>
+function setColor(color) {
+var alist = document.querySelectorAll('a');
+var i = 0;
+while(i < alist.length){
+  alist[i].style.color = color;
+  i = i+1;
+}
+}
+function nightDayHandler(self){
+var target=document.querySelector('body');
+if(self.value==='night'){
+  target.style.backgroundColor='black';
+  target.style.color='white';
+  self.value='day';
+
+  setColor('powderblue');
+} else{
+  target.style.backgroundColor='white';
+  target.style.color='black';
+  self.value='night';
+
+  setColor('blue');
+}
+}
+
+</script>
+</head>
+
+<body>
+  <input id="night_day" type="button" value="night" onclick="
+		nightDayHandler(this);
+	">
+<h1><a href="index.html">편의점 3사 비교분석</a></h1>
+<hr>
+<ul>
+  <li><a href="1.html">편의점 3사 소개</a></li>
+  <li><a href="2.html">특징 비교</a></li>
+  <li><a href="3.html">코로나 이후 전망</a></li>
+</ul>
+<hr>
+<figure>
+  <img src="1.jpg" width="50%">
+  <figcaption style="color:purple;"><b><em>편의점 시장 규모 </em></b></figcaption>
+</figure>
+<p style="margin-top:45px">국내 최초 편의점 <u>'롯데세븐'</u>을 시작으로 1990년대부터 미니스톱, 훼미리마트(CU),
+   LG25(GS25), 바이더웨이 등이 차례로 편의점 시장에 뛰어들었다.<br>
+   <strong>1인 가구의 증가</strong>로 편의점 시장이 급 성장하면서 2019년 기준 점포수 4만 672개에 달한다. <mark style="background-color:pink;">전체 매출액은 약 24조 8천억원</mark>으로 커졌다.</p>
+<br>
+<hr style="border:solid 8px yellow;">
+   <figure>
+     <img src="2.jpg" width="50%">
+     <figcaption style="color:purple;"><b><em>편의점 브랜드별 점포수 현황</em></b></figcaption>
+   </figure>
+   <p style="margin-top:45px">2017년부터 두자릿수대 성장세를 보였던 편의점 점포 수 증가세는 한자릿수대로 정체됐다. 2018년엔 4.4%, 지난해 5.8% 전년대비 점포가 늘었다.<br>
+     수도권 지역 이미 들어설만한 곳엔 다 들어왔고 2018년 편의점업계가 인근 출점을 제한하는 자율규약을 마련하면서 편의점을 새로 내기 쉽지 않다.
+     이 때문에 5년 재계약 시즌을 노리는 편의점업계간 전쟁이 뜨겁다.</p>
+     <div id="disqus_thread"></div>
+     <script>
+
+
+</body>
+</html>

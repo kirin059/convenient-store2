@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<title>편의점 비교분석</title>
+<meta charset="utf-8">
+<script>
+function setColor(color) {
+var alist = document.querySelectorAll('a');
+var i = 0;
+while(i < alist.length){
+  alist[i].style.color = color;
+  i = i+1;
+}
+}
+function nightDayHandler(self){
+var target=document.querySelector('body');
+if(self.value==='night'){
+  target.style.backgroundColor='black';
+  target.style.color='white';
+  self.value='day';
+
+  setColor('powderblue');
+} else{
+  target.style.backgroundColor='white';
+  target.style.color='black';
+  self.value='night';
+
+  setColor('blue');
+}
+}
+
+</script>
+</head>
+
+<body>
+  <input id="night_day" type="button" value="night" onclick="
+		nightDayHandler(this);
+	">
+<h1><a href="index.html">편의점 3사 비교분석</a></h1>
+<hr>
+<ul>
+  <li><a href="1.html">편의점 3사 소개</a></li>
+  <li><a href="2.html">CU vs GS25(2019 기준)</a></li>
+  <li><a href="3.html">코로나 이후 전망</a></li>
+</ul>
+<hr>
+<p>CU와 GS25 편의점은 국내 편의점 1,2위를 다투고 있다(2019년 기준).<br>
+이에 편의점 업계 선두를 달리고 있는 두 기업에 대해 <mark style="background-color:skyblue;">매출과 점포 수</mark>를 기준으로 비교해 보고자 한다.</p>
+<figure>
+  <img src="4.jpg" width="80%">
+  <figcaption style="color:purple;"><b><em>CU & GS25</em></b></figcaption>
+</figure>
+<table border="2">
+  <tr>
+    <th>CU</th>
+    <th>GS25</th>
+  </tr>
+  <tr>
+    <td>CU 11월 말 기준 전국 매장 수 <strong>1만3,820개</strong></td>
+    <td>GS25 11월 말 기준 전국 매장 수 <strong>1만3,899개</strong></td>
+  </tr>
+    <td>CU '평균매출액' <strong>5억9,312만원</strong>을 기록</td>
+    <td>GS25 ‘평균매출액’ <strong>6억7,206만원</strong>을 기록(1위)</td>
+  </tr>
+</body>
+</html>
