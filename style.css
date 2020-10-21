@@ -1,0 +1,98 @@
+*{
+  margin:5px;
+  box-sizing: border-box;
+}
+.blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+}
+.center-align{
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.top-head{
+  display: inline-block;
+  float:right;
+  font-size: 20px;
+  margin:0px;
+  clear:right;
+  clear:right;
+}
+.head{
+  margin:20px;
+  border-bottom:1px solid grey;
+}
+.head h1{
+  display: inline-block;
+  font-size: 40px;
+  position:relative;
+  vertical-align: middle;
+  padding-bottom: 15px;
+}
+
+.head button{
+  margin-top:13px;
+  margin-left:0;
+  padding:0;
+  outline: none;
+  background-image: url(./h_button.jpg);
+  background-position: -155px -403px;
+  background-size: 50px 50px;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: inline-block;
+  position: absolute;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+
+nav{
+  position: relative;
+  top:32px;
+  margin-bottom:20px;
+}
+
+main{
+  position: relative;
+  top:32px;
+  margin-bottom:20px;
+}
+
+#list{
+  list-style: none;
+  padding:0;
+}
+#list li{
+  display: inline;
+  padding:20px;
+  font-size: 23px;
+  margin:0;
+}
+table tr th {
+  background-color: tomato;
+}
+table tr td{
+  width: 30%
+}
+
+section{
+  position: relative;
+  top:170px;
+}
+section #article1{
+  position:absolute;
+  width:490px;
+}
+section #article2{
+  position:absolute;
+  margin-left:550px;
+}

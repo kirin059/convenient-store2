@@ -1,72 +1,72 @@
 <!doctype html>
 <html>
-<head>
-<title>편의점 비교분석</title>
-<meta charset="utf-8">
-<script>
-function setColor(color) {
-var alist = document.querySelectorAll('a');
-var i = 0;
-while(i < alist.length){
-  alist[i].style.color = color;
-  i = i+1;
-}
-}
-function nightDayHandler(self){
-var target=document.querySelector('body');
-if(self.value==='night'){
-  target.style.backgroundColor='black';
-  target.style.color='white';
-  self.value='day';
-
-  setColor('powderblue');
-} else{
-  target.style.backgroundColor='white';
-  target.style.color='black';
-  self.value='night';
-
-  setColor('blue');
-}
-}
-
-</script>
-</head>
+  <head>
+    <title>convenience store</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
 
 <body>
-  <input id="night_day" type="button" value="night" onclick="
-		nightDayHandler(this);
-	">
-<h1><a href="index.html">편의점 3사 비교분석</a></h1>
-<hr>
-<ul>
-  <li><a href="1.html">편의점 3사 소개</a></li>
-  <li><a href="2.html">특징 비교</a></li>
-  <li><a href="3.html">코로나 이후 전망</a></li>
-</ul>
-<hr>
-<table border="0">
-<tr>
-  <td>
-    <figure>
-    <img src="3.jpg" width="100%">
-    <figcaption style="color:purple;"><b><em>대표 편의점 3사</em></b></figcaption>
-  </td>
-</tr>
-</table>
-<br><br><br>
-<table border="2">
-<tr>
-  <th>CU</th>
-  <th>GS25</th>
-  <th>7-eleven</th>
-</tr>
-<tr>
-  <td>BGF리테일이 운영하는 편의점 체인. 1990년 범 삼성계 그룹 중 하나인 보광그룹이 일본 훼미리마트 본사와 라이센스 계약을 맺고 보광 CVS사업부로 출발,
-    이후 '보광훼미리마트'라는 독자적인 법인을 출범시켰다. 2012년 보광그룹에서 훼미리마트와의 라이센스 계약을 해지하고 동년 8월부터 CU라는 독자 편의점 브랜드로 운영 중이다.</td>
-  <td>GS리테일이 운영하는 소매업 편의점 사업 체인. 대한민국 최초 독자 편의점 프랜차이즈 체인점이다. 현재 매출액, 경상수지, 점포 수 등에서 업계 1위를 차지하고 있다.
-    편의점 최초로 자사상표부착상품을 판매한 편의점(계열사 최초로는 GS수퍼마켓)이기도 하다.</td>
-  <td>1927년 미국 텍사스주에서 설립된 사우스랜드 제빙회사(Southland Ice Company)가 모체이다. 초기에는 회사 이름대로 얼음을 주로 팔았지만 오전 7시부터 오후 11시까지 영업하는 시간적 이점을 이용하여 빵이나 우유 따위의 간단한 식품을 판매하기 시작했고,
-    이후 이것이 편의점으로 발전하였다.     당시에는 그 정도로 긴 영업시간은 전례가 없던 일이었기 때문에 화제가 되었고 1946년부터 상호를 영업시간에서 따온 세븐일레븐으로 변경한다.</td>
-</table>
+  <input type="button" value="night" onclick="
+      var target=document.querySelector('body')
+      handler(this);
+     ">
+
+<header>
+  <div class="top-head">
+    <span><a href="http://cu.bgfretail.com/index.do" target="_blank">CU</a></span>
+    <span><a href="http://www.7-eleven.co.kr/" target="_blank">7ELEVEN</a></span>
+    <span><a href="http://gs25.gsretail.com/gscvs/ko/main" target="_blank">GS25</a></span>
+  </div>
+
+  <div class="head">
+    <h1> 편의점 3사 비교분석 </h1>
+    <span><a href="index.html">
+      <button>
+        <span class="blind">홈버튼</span>
+      </button>
+    </a></span>
+  </div>
+</header>
+
+<nav>
+  <div class="center-align">
+    <ul id="list">
+      <li><a href="1.html">Introduce</a></li>
+      <li><a href="2.html">Comparing</a></li>
+      <li><a href="3.html">forecast after COVID-19</a></li>
+      <li><a href="4.html">Best seller</a></li>
+      <li><a href="5.html">Membership</a></li>
+    </ul>
+  <div>
+</nav>
+
+<main class="center-align">
+  <table border="1" style="margin-top:45px; margin-bottom:45px">
+    <tr>
+      <td>
+        <figure>
+        <img src="3.jpg" width="100%">
+        <figcaption style="color:purple;"><b><em>대표 편의점 3사</em></b></figcaption>
+      </td>
+    </tr>
+  </table>
+  </p>
+  <table border="2" style="margin-bottom:45px">
+    <tr>
+      <th>CU</th>
+      <th>GS25</th>
+      <th>7-eleven</th>
+    </tr>
+    <tr>
+      <td>BGF리테일이 운영하는 편의점 체인. 1990년 범 삼성계 그룹 중 하나인 보광그룹이 일본 훼미리마트 본사와 라이센스 계약을 맺고 보광 CVS사업부로 출발,
+        이후 '보광훼미리마트'라는 독자적인 법인을 출범시켰다. 2012년 보광그룹에서 훼미리마트와의 라이센스 계약을 해지하고 동년 8월부터 CU라는 독자 편의점 브랜드로 운영 중이다.</td>
+      <td>GS리테일이 운영하는 소매업 편의점 사업 체인. 대한민국 최초 독자 편의점 프랜차이즈 체인점이다. 현재 매출액, 경상수지, 점포 수 등에서 업계 1위를 차지하고 있다.
+        편의점 최초로 자사상표부착상품을 판매한 편의점(계열사 최초로는 GS수퍼마켓)이기도 하다.</td>
+      <td>1927년 미국 텍사스주에서 설립된 제빙회사(Southland Ice Company)가 모체이다. 초기에는 얼음을 주로 팔았지만 오전 7시부터 오후 11시까지 영업하는 시간적 이점을 이용하여 간단한 식품을 판매하기 시작했고,
+        이후 이것이 편의점으로 발전하였다. 당시에는 그 정도로 긴 영업시간은 전례가 없었기 때문에 화제가 되었고 1946년부터 상호를 영업시간에서 따온 세븐일레븐으로 변경한다.</td>
+  </table>
+</main>
 </body>
 </html>

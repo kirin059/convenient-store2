@@ -1,66 +1,117 @@
 <!doctype html>
 <html>
-<head>
-<title>편의점 비교분석</title>
-<meta charset="utf-8">
-<script>
-function setColor(color) {
-var alist = document.querySelectorAll('a');
-var i = 0;
-while(i < alist.length){
-  alist[i].style.color = color;
-  i = i+1;
-}
-}
-function nightDayHandler(self){
-var target=document.querySelector('body');
-if(self.value==='night'){
-  target.style.backgroundColor='black';
-  target.style.color='white';
-  self.value='day';
-
-  setColor('powderblue');
-} else{
-  target.style.backgroundColor='white';
-  target.style.color='black';
-  self.value='night';
-
-  setColor('blue');
-}
-}
-
-</script>
-</head>
+  <head>
+    <title>convenience store</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
 
 <body>
-  <input id="night_day" type="button" value="night" onclick="
-		nightDayHandler(this);
-	">
-<h1><a href="index.html">편의점 3사 비교분석</a></h1>
-<hr>
-<ul>
-  <li><a href="1.html">편의점 3사 소개</a></li>
-  <li><a href="2.html">CU vs GS25(2019 기준)</a></li>
-  <li><a href="3.html">코로나 이후 전망</a></li>
-</ul>
-<hr>
-<p>CU와 GS25 편의점은 국내 편의점 1,2위를 다투고 있다(2019년 기준).<br>
-이에 편의점 업계 선두를 달리고 있는 두 기업에 대해 <mark style="background-color:skyblue;">매출과 점포 수</mark>를 기준으로 비교해 보고자 한다.</p>
-<figure>
-  <img src="4.jpg" width="80%">
-  <figcaption style="color:purple;"><b><em>CU & GS25</em></b></figcaption>
-</figure>
-<table border="2">
-  <tr>
-    <th>CU</th>
-    <th>GS25</th>
-  </tr>
-  <tr>
-    <td>CU 11월 말 기준 전국 매장 수 <strong>1만3,820개</strong></td>
-    <td>GS25 11월 말 기준 전국 매장 수 <strong>1만3,899개</strong></td>
-  </tr>
-    <td>CU '평균매출액' <strong>5억9,312만원</strong>을 기록</td>
-    <td>GS25 ‘평균매출액’ <strong>6억7,206만원</strong>을 기록(1위)</td>
-  </tr>
+  <input type="button" value="night" onclick="
+      var target=document.querySelector('body')
+      handler(this);
+     ">
+
+<header>
+  <div class="top-head">
+    <span><a href="http://cu.bgfretail.com/index.do" target="_blank">CU</a></span>
+    <span><a href="http://www.7-eleven.co.kr/" target="_blank">7ELEVEN</a></span>
+    <span><a href="http://gs25.gsretail.com/gscvs/ko/main" target="_blank">GS25</a></span>
+  </div>
+
+  <div class="head">
+    <h1> 편의점 3사 비교분석 </h1>
+    <span><a href="index.html">
+      <button>
+        <span class="blind">홈버튼</span>
+      </button>
+    </a></span>
+  </div>
+</header>
+
+<nav>
+  <div class="center-align">
+    <ul id="list">
+      <li><a href="1.html">Introduce</a></li>
+      <li><a href="2.html">Comparing</a></li>
+      <li><a href="3.html">forecast after COVID-19</a></li>
+      <li><a href="4.html">Best seller</a></li>
+      <li><a href="5.html">Membership</a></li>
+    </ul>
+  <div>
+</nav>
+
+<main class="center-align">
+  <p style="margin-top:95px; margin-bottom:45px">CU와 GS25 편의점은 국내 편의점 1,2위를 다투고 있다(2019년 기준).
+  이에 편의점 업계 선두를 달리고 있는 <mark style="background-color:skyblue;">두 기업에 대해 매출과 점포 수를
+  기준으로 비교</mark>해 보고자 한다.</p>
+
+  <p style="margin-top:45px;">GS25가 지난해(2019) 점포 수 기준으로 CU를 20년 만에 제치고 1위를 차지하면서 선두경쟁이
+    치열한데다 출점 제한으로 외형 확장이 어려워진 데 따른 것이다. 편의점업계의 맞수인 GS25는 올해 최첨단 기술을 접목한
+    미래형 점포를 늘리는데 초점을 맞춰 1위 굳히기에 나선다. CU는 '친환경 점포'로 1위 탈환을 시도하고 3위인 세븐일레븐은
+    '플랫폼 다각화'로 승부한다는 각오다.</p>
+    <figure>
+      <img src="4.jpg" width="60%">
+      <figcaption style="color:purple;"><b><em>CU & GS25</em></b></figcaption>
+    </figure>
+
+  <table border="2" style="margin-top:55px;  margin-bottom:75px">
+    <tr>
+      <th>CU</th>
+      <th>GS25</th>
+    </tr>
+    <tr>
+      <td>CU 11월 말 기준 전국 매장 수 <strong>1만3,820개</strong></td>
+      <td>GS25 11월 말 기준 전국 매장 수 <strong>1만3,899개</strong></td>
+    </tr>
+      <td>CU '평균매출액' <strong>5억9,312만원</strong>을 기록</td>
+      <td>GS25 ‘평균매출액’ <strong>6억7,206만원</strong>을 기록(1위)</td>
+    </tr>
+    <section>
+      <p id="article1">
+        <strong>올해 5600억 투자 예고...CU, '친환경 점포'로 재반격 시도</strong><br><br>
+        27일 금융감독원 전자공시시스템에 따르면 편의점 업계 빅3인 GS리테일·BGF리테일·코리아세븐의
+        올해 투자 규모는 5638억9500만원이다. 지난해보다 7.4% 증가했다. 전체 투자금의 절반 가량을
+        차지하는 곳은 CU를 운영하는 BGF리테일이다. 올해 BGF리테일은 2538억7600만원을 미래 먹거리에 투자한다.
+        지난해보다 6.1% 늘어난 수준이다. 이처럼 BGF리테일이 대규모 투자에 나선 것은 GS리테일에 선두 자리를
+        뺏긴 게 가장 크게 작용한 것으로 보인다. BGF리테일은 지난해 점포 수 기준으로 GS리테일에 1위를 내줬다.
+        20년 만에 일이다. 실제 GS25의 점포 수는 지난해 11월 말 1만3899곳으로, CU(1만3820곳)를 79개 차로 앞질렀다.
+        특히 BGF리테일은 올해 1위 탈환을 위해 신규 가맹점 개설에도 힘쓴다. 신규 가맹점을 여는데 필요한 보증금 명목으로
+        262억6400만원을 투입한다. 또한 친환경 편의점 '그린 스토어' 확대에 상당한 자금을 투입한다.
+        현재 BGF리테일의 그린 스토어는 전국에서 서울 잠원점과 경기 위례35단지점 등 2개 점포가 있다.
+        그린스토어는 '3R'(Reduce, Reuse, Recycle)의 콘셉트에 맞춰 시설 및 집기, 인테리어, 운영에 이르기까지
+        '도시형 친환경 편의점'으로 구현한 점이 특징이다.
+        다만 기존 매장과 달리 해당 매장에는 에너지 효율을 극대화하기 위한 설비가 필요하기 때문에 초기 투자 비용이 많이 든다.
+        실제 점포에는 매장 에너지관리시스템(REMS)을 비롯해 ▲고효율 냉장진열대 ▲자연 냉매 냉동고 및 실외기 ▲공기청정시스템
+        ▲음식물 처리기 등이 설치된다. 회사 측은 올해 그린 스토어를 신규 점포 개설뿐 아니라 기존 점포로까지 점차 늘려나간다는
+        방침이다. 올해는 연구 개발비도 대폭 늘렸다. BGF리테일은 연구 개발비 명목으로 99억9700억원을 투자한다.
+        전년 대비 6배 넘게 증가한 규모다. CU만의 차별화된 상품이나 마케팅을 위해 쓰일 비용이다.
+        CU는 방송 프로그램인 '편스토랑'과 제휴를 맺고 제품을 출시해 가시적인 성과를 내고 있다. 특히 마장면이나
+        파래탕면은 해당 카테고리에서 매출 1위를 할 정도로 큰 호응을 얻고 있다. 올해 초 구축한 진천 중앙물류센터 안에
+        중앙 집중 조리시스템인 '센트럴 키친'을 통해 간편식 제조 효율도 높인다. 이를 통해 식품 원가를 줄이고 품질을
+        향상시킨다는 목표다.
+      </p>
+    </section>
+    <section>
+      <p id="article2">
+        <strong>GS25, 1913억 투입...'스마트스토어'로 1위 수성</strong><br><br>
+        GS25를 운영 중인 GS리테일도 올해 1위 자리를 지키기 위해 투자 규모를 더 늘렸다. GS리테일의 올해 투자 규모는
+        총 1913억원으로 지난해보다 8.5% 증가했다. GS리테일은 올해 최첨단 디지털 기술을 접목한 '스마트스토어'
+        점포를 확대해 경쟁력을 끌어올린다는 전략이다. 기존 오프라인 매장에 디지털 신기술을 융·복합한 스마트스토어 매장으로
+        탈바꿈하겠다는 복안이다. '무인·하이브리드 점포'와 '피트니스형이 대표적이다. GS리테일이 선보인 무인·하이브리드형
+        점포는 현재 31개가 있다. 무인형 점포는 지난달 기준으로 15개, 하이브리드 매장은 16개다. 하이브리드형 점포는 셀프 결제
+        기반의 유·무인 전환형 매장을 의미한다. 낮에는 점원이 상주하는 일반 형태로 운영되지만, 야간 심야시간대에는 무인 매장으로
+        운영되는 식이다. 해당 점포에는 최첨단 기술이 다수 적용됐다. 매장 내 천정에 CCTV가 10여개 있어 고객의 동선을 파악해
+        도난을 방지한다. 또한 상품 진열 관리를 보다 효율적으로 하기 위해 빅데이터 기반의 스마트 CCTV도 설치돼 있다.
+        무인 셀프 계산대도 있어 직접 결제를 하고 매장을 나오면 된다. 매장에 들어갈 때도 '디지털 관문'을 통과해야 한다.
+        후불 교통카드나 신용·체크카드 등으로 인증 절차를 거쳐야 매장 진입이 가능하다.
+        '피트니스형 GS25' 매장도 자율 결제시스템이 도입된 무인 점포다. 피트니스 센터에 입점한 매장으로, 해당 회원들만
+        이용할 수 있는 특화 매장이다. GS리테일은 올해도 미래형 특화 매장을 계속해서 늘려 나간다는 계획이다.
+        또한 배달·택배 서비스도 한층 업그레이드 하기 위해 시스템 강화에 나서고 점포당 매출 증대를 위해서 신선식품 등
+        상품 경쟁력도 높인다는 복안이다.
+      </p>
+    </section>
+ </main>
 </body>
 </html>

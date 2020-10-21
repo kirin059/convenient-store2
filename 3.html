@@ -1,59 +1,59 @@
 <!doctype html>
 <html>
-<head>
-<title>편의점 비교분석</title>
-<meta charset="utf-8">
-<script>
-function setColor(color) {
-var alist = document.querySelectorAll('a');
-var i = 0;
-while(i < alist.length){
-  alist[i].style.color = color;
-  i = i+1;
-}
-}
-function nightDayHandler(self){
-var target=document.querySelector('body');
-if(self.value==='night'){
-  target.style.backgroundColor='black';
-  target.style.color='white';
-  self.value='day';
-
-  setColor('powderblue');
-} else{
-  target.style.backgroundColor='white';
-  target.style.color='black';
-  self.value='night';
-
-  setColor('blue');
-}
-}
-
-</script>
-</head>
+  <head>
+    <title>convenience store</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
 
 <body>
-  <input id="night_day" type="button" value="night" onclick="
-		nightDayHandler(this);
-	">
-<h1><a href="index.html">편의점 3사 비교분석</a></h1>
-<hr>
-<ul>
-  <li><a href="1.html">편의점 3사 소개</a></li>
-  <li><a href="2.html">특징 비교</a></li>
-  <li><a href="3.html">코로나 이후 전망</a></li>
-</ul>
-<hr>
-<p>BGF리테일 관계자는 “코로나19 상황 속에서도 다른 오프라인 유통 채널에 비해 매출 방어에 성공했다고 판단한다.
-  소비 침체 속 점포 매출 향상을 위한 알뜰 장 보기 프로모션 등의 긍정적 영향으로 일반 입지 점포와 신규점은 그나마 안정적인 매출을 유지했다.<br>
-  향후 생활방역체계로의 전환, 교육 환경 정상화 등에 따라 점진적으로 실적이 회복될 것으로 예상한다”고 말했다.</p>
-<p>GS리테일은 편의점 외에 사업 다각화 추진 성과를 강조한다. GS리테일 관계자는 “GS리테일은 위기에 강한 사업 포트폴리오 구축과 지속적인 체질 강화를 통해
-  외부 환경의 영향에도 큰 흔들림이 없는 안정적인 수익 체계를 확보했다.<br>
-  1만5000여개의 GS리테일 유통 플랫폼은 국가적 경제위기를 조기에 극복하기 위해 적극적 소비 창출과 지역사회 공헌자로서의 역할을 하는 데 큰 보탬이 되고자 한다”고 밝혔다.</p>
+  <input type="button" value="night" onclick="
+      var target=document.querySelector('body')
+      handler(this);
+     ">
 
-<figure>
-  <img src="1.jpg" width="50%">
-  <figcaption style="color:purple;"><b><em>2020 코로나로 인한 위협</em></b></figcaption>
-</figure>
+<header>
+  <div class="top-head">
+    <span><a href="http://cu.bgfretail.com/index.do" target="_blank">CU</a></span>
+    <span><a href="http://www.7-eleven.co.kr/" target="_blank">7ELEVEN</a></span>
+    <span><a href="http://gs25.gsretail.com/gscvs/ko/main" target="_blank">GS25</a></span>
+  </div>
+
+  <div class="head">
+    <h1> 편의점 3사 비교분석 </h1>
+    <span><a href="index.html">
+      <button>
+        <span class="blind">홈버튼</span>
+      </button>
+    </a></span>
+  </div>
+</header>
+
+<nav>
+  <div class="center-align">
+    <ul id="list">
+      <li><a href="1.html">Introduce</a></li>
+      <li><a href="2.html">Comparing</a></li>
+      <li><a href="3.html">forecast after COVID-19</a></li>
+      <li><a href="4.html">Best seller</a></li>
+      <li><a href="5.html">Membership</a></li>
+    </ul>
+  <div>
+</nav>
+
+<main class="center-align">
+  <p style="margin-top:45px;">BGF리테일 관계자는 “코로나19 상황 속에서도 다른 오프라인 유통 채널에 비해 매출 방어에 성공했다고 판단한다.
+    소비 침체 속 점포 매출 향상을 위한 알뜰 장 보기 프로모션 등의 긍정적 영향으로 일반 입지 점포와 신규점은 그나마 안정적인 매출을 유지했다.
+    향후 생활방역체계로의 전환, 교육 환경 정상화 등에 따라 점진적으로 실적이 회복될 것으로 예상한다”고 말했다.</p>
+  <p style="margin-top:45px;">GS리테일은 편의점 외에 사업 다각화 추진 성과를 강조한다. GS리테일 관계자는 “GS리테일은 위기에 강한 사업 포트폴리오 구축과 지속적인 체질 강화를 통해
+    외부 환경의 영향에도 큰 흔들림이 없는 안정적인 수익 체계를 확보했다.
+    1만5000여개의 GS리테일 유통 플랫폼은 국가적 경제위기를 조기에 극복하기 위해 적극적 소비 창출과 지역사회 공헌자로서의 역할을 하는 데 큰 보탬이 되고자 한다”고 밝혔다.</p>
+
+    <figure>
+      <img src="1.jpg" width="50%">
+      <figcaption style="color:purple;"><b><em>2020 코로나로 인한 위협</em></b></figcaption>
+    </figure>
+</main>
 </body>
 </html>
